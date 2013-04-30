@@ -16,3 +16,9 @@ tmp
 .yardoc
 _yardoc
 doc/
+.DS_Store
+sftp-config.json
+.gitignore
+log/
+config.yaml
+*sublime-*
