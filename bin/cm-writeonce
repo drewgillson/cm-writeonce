@@ -4,7 +4,7 @@ require File.join(File.dirname(__FILE__), '../lib/cm-writeonce.rb')
 begin
     k = YAML.load_file 'config.yaml'
 rescue StandardError => e
-    puts "Create a file called config.yaml in the current directory with your API keys for CampaignMonitor and the CampaignMonitor list ID you want to subscribe to. Here is an example:\n\nkm_key: xxxxxxx\ncm_key: xxxxxxx\ncm_list: xxxxxxx\nfilename: test.csv"
+    puts "Create a file called config.yaml in the current directory with your API keys for CampaignMonitor and the CampaignMonitor list ID you want to subscribe to. Here is an example:\ncm_key: xxxxxxx\ncm_list: xxxxxxx\nfilename: test.csv"
     abort
 end
 CmWriteonce::initialize(k['cm_key'], k['cm_list'], k['filename'])
